@@ -24,7 +24,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:osReilly/mblog.git',
       path : '/opt/work',
-      'post-deploy' : 'npm install && pm2 startOrRestart ecosystem.config.js --env production'
+      'post-deploy' : 'git pull origin master && npm install && pm2 startOrRestart ecosystem.config.js --env production'
     }
   }
 };
