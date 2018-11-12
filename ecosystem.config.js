@@ -1,7 +1,7 @@
 module.exports = {
   apps : [{
-    name: 'API',
-    script: 'bin/www',
+    name: 'mblog',
+    script: './bin/www',
 
     // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
     args: 'one two',
@@ -24,7 +24,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:osReilly/mblog.git',
       path : '/opt/work',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
+      'post-deploy' : 'npm install && pm2 startOrRestart ecosystem.config.js --env production'
     }
   }
 };
