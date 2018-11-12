@@ -12,6 +12,12 @@ router.get('/foo', function *(next) {
   });
 });
 
+router.get('/cssBook', function *(next) {
+  yield this.render('cssBook', {
+    title: 'Hello World foo!'
+  });
+});
+
 
 
 module.exports = router;
