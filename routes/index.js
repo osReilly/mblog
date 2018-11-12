@@ -12,4 +12,6 @@ router.get('/foo', function *(next) {
   });
 });
 
+
+
 module.exports = router;
